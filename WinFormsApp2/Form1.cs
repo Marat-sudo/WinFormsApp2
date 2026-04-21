@@ -96,5 +96,21 @@ namespace WinFormsApp2
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Hide();
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Hide();
+            Form4 f4 = new Form4();
+            f4.Show();
+        }
     }
 }

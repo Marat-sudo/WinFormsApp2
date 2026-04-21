@@ -30,6 +30,7 @@
         {
             tabControl1 = new TabControl();
             tabHome = new TabPage();
+            label4 = new Label();
             button1 = new Button();
             buttonSetPhone = new Button();
             textBox3 = new TextBox();
@@ -45,12 +46,15 @@
             button3 = new Button();
             button2 = new Button();
             tabService = new TabPage();
+            button6 = new Button();
+            button5 = new Button();
+            button4 = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            label4 = new Label();
             tabControl1.SuspendLayout();
             tabHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabNews.SuspendLayout();
+            tabService.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -86,6 +90,16 @@
             tabHome.TabIndex = 0;
             tabHome.Text = "tabPage1";
             tabHome.Click += tabHone_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(66, 315);
+            label4.Name = "label4";
+            label4.Size = new Size(160, 15);
+            label4.TabIndex = 11;
+            label4.Text = "rpo-24 марат семичаевский";
+            label4.Click += label4_Click;
             // 
             // button1
             // 
@@ -233,21 +247,43 @@
             // tabService
             // 
             tabService.BackColor = Color.DarkOliveGreen;
+            tabService.Controls.Add(button6);
+            tabService.Controls.Add(button5);
+            tabService.Controls.Add(button4);
             tabService.Location = new Point(4, 24);
             tabService.Name = "tabService";
             tabService.Size = new Size(793, 413);
             tabService.TabIndex = 2;
             tabService.Text = "tabPage3";
             // 
-            // label4
+            // button6
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(66, 315);
-            label4.Name = "label4";
-            label4.Size = new Size(160, 15);
-            label4.TabIndex = 11;
-            label4.Text = "rpo-24 марат семичаевский";
-            label4.Click += label4_Click;
+            button6.Location = new Point(441, 49);
+            button6.Name = "button6";
+            button6.Size = new Size(229, 84);
+            button6.TabIndex = 2;
+            button6.Text = "отчеты";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(86, 232);
+            button5.Name = "button5";
+            button5.Size = new Size(229, 84);
+            button5.TabIndex = 1;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(86, 49);
+            button4.Name = "button4";
+            button4.Size = new Size(229, 84);
+            button4.TabIndex = 0;
+            button4.Text = "крестики нолики";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // Form1
             // 
@@ -262,6 +298,7 @@
             tabHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabNews.ResumeLayout(false);
+            tabService.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -286,5 +323,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button button3;
         private Label label4;
+        private Button button6;
+        private Button button5;
+        private Button button4;
     }
 }
