@@ -40,8 +40,10 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            label6 = new Label();
+            buttonRetry = new Button();
+            labelO = new Label();
+            labelX = new Label();
             SuspendLayout();
             // 
             // button1_2
@@ -51,17 +53,21 @@
             button1_2.Name = "button1_2";
             button1_2.Size = new Size(100, 100);
             button1_2.TabIndex = 1;
+            button1_2.TabStop = false;
             button1_2.UseVisualStyleBackColor = true;
             button1_2.Click += button1_2_Click;
             // 
             // button1_3
             // 
+            button1_3.BackColor = SystemColors.Control;
+            button1_3.CausesValidation = false;
             button1_3.Font = new Font("Segoe UI", 50F);
             button1_3.Location = new Point(282, 80);
             button1_3.Name = "button1_3";
             button1_3.Size = new Size(100, 100);
             button1_3.TabIndex = 2;
-            button1_3.UseVisualStyleBackColor = true;
+            button1_3.TabStop = false;
+            button1_3.UseVisualStyleBackColor = false;
             button1_3.Click += button1_3_Click;
             // 
             // button1_1
@@ -71,6 +77,7 @@
             button1_1.Name = "button1_1";
             button1_1.Size = new Size(100, 100);
             button1_1.TabIndex = 3;
+            button1_1.TabStop = false;
             button1_1.UseVisualStyleBackColor = true;
             button1_1.Click += button1_1_Click;
             // 
@@ -81,16 +88,19 @@
             button2_1.Name = "button2_1";
             button2_1.Size = new Size(100, 100);
             button2_1.TabIndex = 6;
+            button2_1.TabStop = false;
             button2_1.UseVisualStyleBackColor = true;
             button2_1.Click += button2_1_Click;
             // 
             // button2_3
             // 
+            button2_3.CausesValidation = false;
             button2_3.Font = new Font("Segoe UI", 50F);
             button2_3.Location = new Point(282, 186);
             button2_3.Name = "button2_3";
             button2_3.Size = new Size(100, 100);
             button2_3.TabIndex = 5;
+            button2_3.TabStop = false;
             button2_3.UseVisualStyleBackColor = true;
             button2_3.Click += button2_3_Click;
             // 
@@ -101,6 +111,7 @@
             button2_2.Name = "button2_2";
             button2_2.Size = new Size(100, 100);
             button2_2.TabIndex = 4;
+            button2_2.TabStop = false;
             button2_2.UseVisualStyleBackColor = true;
             button2_2.Click += button2_2_Click;
             // 
@@ -111,16 +122,19 @@
             button3_1.Name = "button3_1";
             button3_1.Size = new Size(100, 100);
             button3_1.TabIndex = 9;
+            button3_1.TabStop = false;
             button3_1.UseVisualStyleBackColor = true;
             button3_1.Click += button3_1_Click;
             // 
             // button3_3
             // 
+            button3_3.CausesValidation = false;
             button3_3.Font = new Font("Segoe UI", 50F);
             button3_3.Location = new Point(282, 292);
             button3_3.Name = "button3_3";
             button3_3.Size = new Size(100, 100);
             button3_3.TabIndex = 8;
+            button3_3.TabStop = false;
             button3_3.UseVisualStyleBackColor = true;
             button3_3.Click += button3_3_Click;
             // 
@@ -131,6 +145,7 @@
             button3_2.Name = "button3_2";
             button3_2.Size = new Size(100, 100);
             button3_2.TabIndex = 7;
+            button3_2.TabStop = false;
             button3_2.UseVisualStyleBackColor = true;
             button3_2.Click += button3_2_Click;
             // 
@@ -163,29 +178,56 @@
             label3.TabIndex = 12;
             label3.Text = "счет";
             // 
-            // label4
+            // label6
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(563, 67);
-            label4.Name = "label4";
-            label4.Size = new Size(0, 15);
-            label4.TabIndex = 13;
+            label6.AutoSize = true;
+            label6.Location = new Point(70, 26);
+            label6.Name = "label6";
+            label6.Size = new Size(79, 15);
+            label6.TabIndex = 15;
+            label6.Text = "ход игрока: X";
             // 
-            // label5
+            // buttonRetry
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(663, 67);
-            label5.Name = "label5";
-            label5.Size = new Size(0, 15);
-            label5.TabIndex = 14;
+            buttonRetry.Enabled = false;
+            buttonRetry.Location = new Point(563, 206);
+            buttonRetry.Name = "buttonRetry";
+            buttonRetry.Size = new Size(80, 80);
+            buttonRetry.TabIndex = 16;
+            buttonRetry.Text = "начать заново";
+            buttonRetry.UseVisualStyleBackColor = true;
+            buttonRetry.Visible = false;
+            buttonRetry.Click += buttonRetry_Click;
+            // 
+            // labelO
+            // 
+            labelO.AutoSize = true;
+            labelO.Location = new Point(563, 67);
+            labelO.Name = "labelO";
+            labelO.Size = new Size(13, 15);
+            labelO.TabIndex = 17;
+            labelO.Text = "0";
+            labelO.Visible = false;
+            // 
+            // labelX
+            // 
+            labelX.AutoSize = true;
+            labelX.Location = new Point(663, 67);
+            labelX.Name = "labelX";
+            labelX.Size = new Size(13, 15);
+            labelX.TabIndex = 18;
+            labelX.Text = "0";
+            labelX.Visible = false;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label5);
-            Controls.Add(label4);
+            Controls.Add(labelX);
+            Controls.Add(labelO);
+            Controls.Add(buttonRetry);
+            Controls.Add(label6);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -221,7 +263,9 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label label6;
+        private Button buttonRetry;
+        private Label labelO;
+        private Label labelX;
     }
 }

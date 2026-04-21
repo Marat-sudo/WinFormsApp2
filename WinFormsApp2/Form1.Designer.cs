@@ -42,9 +42,11 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             tabNews = new TabPage();
+            button3 = new Button();
             button2 = new Button();
             tabService = new TabPage();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            label4 = new Label();
             tabControl1.SuspendLayout();
             tabHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -65,6 +67,7 @@
             // tabHome
             // 
             tabHome.BackColor = Color.DarkGray;
+            tabHome.Controls.Add(label4);
             tabHome.Controls.Add(button1);
             tabHome.Controls.Add(buttonSetPhone);
             tabHome.Controls.Add(textBox3);
@@ -198,6 +201,7 @@
             // tabNews
             // 
             tabNews.BackColor = Color.NavajoWhite;
+            tabNews.Controls.Add(button3);
             tabNews.Controls.Add(button2);
             tabNews.Location = new Point(4, 24);
             tabNews.Name = "tabNews";
@@ -206,9 +210,19 @@
             tabNews.TabIndex = 1;
             tabNews.Text = "tabPage2";
             // 
+            // button3
+            // 
+            button3.Location = new Point(126, 132);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 1;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // button2
             // 
-            button2.Location = new Point(36, 72);
+            button2.Location = new Point(126, 63);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 0;
@@ -224,6 +238,16 @@
             tabService.Size = new Size(793, 413);
             tabService.TabIndex = 2;
             tabService.Text = "tabPage3";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(66, 315);
+            label4.Name = "label4";
+            label4.Size = new Size(160, 15);
+            label4.TabIndex = 11;
+            label4.Text = "rpo-24 марат семичаевский";
+            label4.Click += label4_Click;
             // 
             // Form1
             // 
@@ -260,5 +284,7 @@
         private Button button1;
         private Button button2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button button3;
+        private Label label4;
     }
 }

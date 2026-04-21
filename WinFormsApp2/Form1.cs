@@ -83,5 +83,18 @@ namespace WinFormsApp2
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Hide();
+            Form3 f3 = new Form3();
+            f3.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
