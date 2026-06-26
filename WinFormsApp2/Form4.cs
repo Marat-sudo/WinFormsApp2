@@ -52,13 +52,13 @@ namespace WinFormsApp2
         private void buttonEmail_Click(object sender, EventArgs e)
         {
             MailAddress from = new MailAddress("braticmaratic@mail.ru", "Отправитель");
-            MailAddress to = new MailAddress("braticmaratic@mail.ru", "Получатель");
+            MailAddress to = new MailAddress("k_d_i01@mail.ru", "Получатель");
             using (MailMessage mail_message = new MailMessage(from, to))
             using (SmtpClient smtp_cl = new SmtpClient())
             {
                 smtp_cl.UseDefaultCredentials = false;
                 smtp_cl.Credentials = new NetworkCredential("braticmaratic@mail.ru", "DsY2IFd7mgydRPVDsIMn");
-                mail_message.Subject = "Test";
+                mail_message.Subject = "this marat";
                 mail_message.Body = emailText;
 
                 mail_message.IsBodyHtml = true;
