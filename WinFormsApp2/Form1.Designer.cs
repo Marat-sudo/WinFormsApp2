@@ -272,8 +272,9 @@
             button5.Name = "button5";
             button5.Size = new Size(229, 84);
             button5.TabIndex = 1;
-            button5.Text = "button5";
+            button5.Text = "Game";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
