@@ -1,10 +1,54 @@
+using System.Windows.Forms;
+
 namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
+        private List<NewsItem> newsList = new List<NewsItem>() {
+        new NewsItem { Id = 1, Title = "Новость 1", Date = DateTime.Now, Content = "Текст..." },
+        new NewsItem { Id = 2, Title = "Новость 2", Date = DateTime.Now, Content = "Текст..." }
+        };
+
         public Form1()
         {
             InitializeComponent();
+
+            LoadData();
+        }
+
+        public int getLastId()
+        {
+            return newsList.Count + 1;
+        }
+
+        public void updateNew(NewsItem item)
+        {
+            NewsItem? news = newsList.Find(it => it.Id == item.Id);
+
+            if (news == null) return;
+
+            news.Title = item.Title;
+            news.Content = item.Content;
+
+            LoadData();
+        }
+
+        public void addNew(NewsItem item)
+        {
+            newsList.Add(item);
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            listBox1.Items.Clear();
+
+            foreach (NewsItem item in newsList)
+            {
+                listBox1.Items.Add(item);
+            }
+ 
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,8 +155,56 @@ namespace WinFormsApp2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form f6 = new Form6();
+            Form f6 = new Form3();
             f6.ShowDialog();
+        }
+
+        // new news
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        // add
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form f = new Form8(this);
+            f.ShowDialog();
+        }
+
+        private void listBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            NewsItem selectedNews = (NewsItem)listBox1.SelectedItem;
+            
+            DisplayNews(selectedNews);
+        }
+
+        private void DisplayNews(NewsItem news)
+        {
+            if (news == null) return;
+            newName.Text = news.Title;
+            newData.Text = news.Date.ToShortTimeString();
+            newText.Text = news.Content;
+        }
+
+        private bool isClike()
+        {
+            return (NewsItem?)listBox1.SelectedItem != null;
+        }
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (!isClike()) return;
+            
+            var selectedNews = (NewsItem)listBox1.SelectedItem;
+
+            Form red = new Form7(this, selectedNews);
+            red.ShowDialog();
         }
     }
 }

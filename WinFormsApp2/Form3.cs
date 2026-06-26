@@ -49,5 +49,10 @@ namespace WinFormsApp2
             int selectId = listBox1.SelectedIndex;
             textBox3.Text = prices.Items[selectId].ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

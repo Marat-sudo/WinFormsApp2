@@ -163,6 +163,7 @@
             button2.TabIndex = 12;
             button2.Text = "СОХРАНИТЬ";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // pictureBox1
             // 

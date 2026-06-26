@@ -28,45 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabControl1 = new TabControl();
+            components = new System.ComponentModel.Container();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            tabService = new TabPage();
+            button6 = new Button();
+            button5 = new Button();
+            button4 = new Button();
+            tabNews = new TabPage();
+            newData = new Label();
+            newText = new TextBox();
+            newName = new Label();
+            button2 = new Button();
+            listBox1 = new ListBox();
             tabHome = new TabPage();
             label4 = new Label();
             button1 = new Button();
             buttonSetPhone = new Button();
             textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             label3 = new Label();
             buttonSetSecondName = new Button();
-            textBox2 = new TextBox();
             label2 = new Label();
             buttonSetName = new Button();
-            textBox1 = new TextBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            tabNews = new TabPage();
-            button3 = new Button();
-            button2 = new Button();
-            tabService = new TabPage();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            tabControl1.SuspendLayout();
+            tabControl1 = new TabControl();
+            imageList1 = new ImageList(components);
+            tabService.SuspendLayout();
+            tabNews.SuspendLayout();
             tabHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            tabNews.SuspendLayout();
-            tabService.SuspendLayout();
+            tabControl1.SuspendLayout();
             SuspendLayout();
             // 
-            // tabControl1
+            // tabService
             // 
-            tabControl1.Controls.Add(tabHome);
-            tabControl1.Controls.Add(tabNews);
-            tabControl1.Controls.Add(tabService);
-            tabControl1.Location = new Point(1, 12);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(801, 441);
-            tabControl1.TabIndex = 1;
+            tabService.BackColor = Color.DarkOliveGreen;
+            tabService.Controls.Add(button6);
+            tabService.Controls.Add(button5);
+            tabService.Controls.Add(button4);
+            tabService.Location = new Point(4, 24);
+            tabService.Name = "tabService";
+            tabService.Size = new Size(793, 413);
+            tabService.TabIndex = 2;
+            tabService.Text = "Готовые решения";
+            // 
+            // button6
+            // 
+            button6.Location = new Point(441, 49);
+            button6.Name = "button6";
+            button6.Size = new Size(229, 84);
+            button6.TabIndex = 2;
+            button6.Text = "отчеты";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(86, 232);
+            button5.Name = "button5";
+            button5.Size = new Size(229, 84);
+            button5.TabIndex = 1;
+            button5.Text = "Подсчет";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(86, 49);
+            button4.Name = "button4";
+            button4.Size = new Size(229, 84);
+            button4.TabIndex = 0;
+            button4.Text = "крестики нолики";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // tabNews
+            // 
+            tabNews.BackColor = Color.NavajoWhite;
+            tabNews.Controls.Add(newData);
+            tabNews.Controls.Add(newText);
+            tabNews.Controls.Add(newName);
+            tabNews.Controls.Add(button2);
+            tabNews.Controls.Add(listBox1);
+            tabNews.Location = new Point(4, 24);
+            tabNews.Name = "tabNews";
+            tabNews.Padding = new Padding(3);
+            tabNews.Size = new Size(793, 413);
+            tabNews.TabIndex = 1;
+            tabNews.Text = "Новости";
+            // 
+            // newData
+            // 
+            newData.AutoSize = true;
+            newData.Location = new Point(716, 50);
+            newData.Name = "newData";
+            newData.Size = new Size(38, 15);
+            newData.TabIndex = 6;
+            newData.Text = "label6";
+            // 
+            // newText
+            // 
+            newText.Location = new Point(468, 89);
+            newText.Name = "newText";
+            newText.Size = new Size(286, 23);
+            newText.TabIndex = 5;
+            // 
+            // newName
+            // 
+            newName.AutoSize = true;
+            newName.Location = new Point(468, 50);
+            newName.Name = "newName";
+            newName.Size = new Size(38, 15);
+            newName.TabIndex = 4;
+            newName.Text = "label5";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(151, 314);
+            button2.Name = "button2";
+            button2.Size = new Size(157, 23);
+            button2.TabIndex = 2;
+            button2.Text = "добавить новость";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(26, 41);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(392, 244);
+            listBox1.TabIndex = 0;
+            listBox1.Click += listBox1_Click;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            listBox1.DoubleClick += listBox1_DoubleClick;
             // 
             // tabHome
             // 
@@ -75,12 +173,12 @@
             tabHome.Controls.Add(button1);
             tabHome.Controls.Add(buttonSetPhone);
             tabHome.Controls.Add(textBox3);
+            tabHome.Controls.Add(textBox2);
+            tabHome.Controls.Add(textBox1);
             tabHome.Controls.Add(label3);
             tabHome.Controls.Add(buttonSetSecondName);
-            tabHome.Controls.Add(textBox2);
             tabHome.Controls.Add(label2);
             tabHome.Controls.Add(buttonSetName);
-            tabHome.Controls.Add(textBox1);
             tabHome.Controls.Add(label1);
             tabHome.Controls.Add(pictureBox1);
             tabHome.Location = new Point(4, 24);
@@ -88,7 +186,7 @@
             tabHome.Padding = new Padding(3);
             tabHome.Size = new Size(793, 413);
             tabHome.TabIndex = 0;
-            tabHome.Text = "tabPage1";
+            tabHome.Text = "Главная";
             tabHome.Click += tabHone_Click;
             // 
             // label4
@@ -131,6 +229,24 @@
             textBox3.TabIndex = 8;
             textBox3.Visible = false;
             // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(274, 112);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 5;
+            textBox2.Visible = false;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(275, 45);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 2;
+            textBox1.Visible = false;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -152,15 +268,6 @@
             buttonSetSecondName.UseVisualStyleBackColor = true;
             buttonSetSecondName.Visible = false;
             buttonSetSecondName.Click += buttonSetSecondName_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(274, 112);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
-            textBox2.Visible = false;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
@@ -184,15 +291,6 @@
             buttonSetName.Visible = false;
             buttonSetName.Click += buttonSetName_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(275, 45);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
-            textBox1.Visible = false;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -212,79 +310,22 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // tabNews
+            // tabControl1
             // 
-            tabNews.BackColor = Color.NavajoWhite;
-            tabNews.Controls.Add(button3);
-            tabNews.Controls.Add(button2);
-            tabNews.Location = new Point(4, 24);
-            tabNews.Name = "tabNews";
-            tabNews.Padding = new Padding(3);
-            tabNews.Size = new Size(793, 413);
-            tabNews.TabIndex = 1;
-            tabNews.Text = "tabPage2";
+            tabControl1.Controls.Add(tabHome);
+            tabControl1.Controls.Add(tabNews);
+            tabControl1.Controls.Add(tabService);
+            tabControl1.Location = new Point(1, 12);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(801, 441);
+            tabControl1.TabIndex = 1;
             // 
-            // button3
+            // imageList1
             // 
-            button3.Location = new Point(126, 132);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 1;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(126, 63);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 0;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // tabService
-            // 
-            tabService.BackColor = Color.DarkOliveGreen;
-            tabService.Controls.Add(button6);
-            tabService.Controls.Add(button5);
-            tabService.Controls.Add(button4);
-            tabService.Location = new Point(4, 24);
-            tabService.Name = "tabService";
-            tabService.Size = new Size(793, 413);
-            tabService.TabIndex = 2;
-            tabService.Text = "tabPage3";
-            // 
-            // button6
-            // 
-            button6.Location = new Point(441, 49);
-            button6.Name = "button6";
-            button6.Size = new Size(229, 84);
-            button6.TabIndex = 2;
-            button6.Text = "отчеты";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(86, 232);
-            button5.Name = "button5";
-            button5.Size = new Size(229, 84);
-            button5.TabIndex = 1;
-            button5.Text = "Game";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(86, 49);
-            button4.Name = "button4";
-            button4.Size = new Size(229, 84);
-            button4.TabIndex = 0;
-            button4.Text = "крестики нолики";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageSize = new Size(16, 16);
+            imageList1.TransparentColor = Color.Transparent;
             // 
             // Form1
             // 
@@ -294,38 +335,42 @@
             Controls.Add(tabControl1);
             Name = "Form1";
             Text = "Form1";
-            tabControl1.ResumeLayout(false);
+            tabService.ResumeLayout(false);
+            tabNews.ResumeLayout(false);
+            tabNews.PerformLayout();
             tabHome.ResumeLayout(false);
             tabHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            tabNews.ResumeLayout(false);
-            tabService.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TabControl tabControl1;
-        private TabPage tabHome;
-        private TabPage tabNews;
-        private TabPage tabService;
-        private TextBox textBox1;
-        private Label label1;
-        private PictureBox pictureBox1;
-        private Button buttonSetName;
-        private Button buttonSetPhone;
-        private TextBox textBox3;
-        private Label label3;
-        private Button buttonSetSecondName;
-        private TextBox textBox2;
-        private Label label2;
-        private Button button1;
-        private Button button2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Button button3;
-        private Label label4;
+        private TabPage tabService;
         private Button button6;
         private Button button5;
         private Button button4;
+        private TabPage tabNews;
+        private TabPage tabHome;
+        private Label label4;
+        private Button button1;
+        private Button buttonSetPhone;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Label label3;
+        private Button buttonSetSecondName;
+        private Label label2;
+        private Button buttonSetName;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private TabControl tabControl1;
+        private ImageList imageList1;
+        private ListBox listBox1;
+        private Button button2;
+        private Label newData;
+        private TextBox newText;
+        private Label newName;
     }
 }
